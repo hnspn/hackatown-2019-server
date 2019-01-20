@@ -1,9 +1,12 @@
 const express = require("express");
+const cors = require("cors");
+
 const MongoClient = require("mongodb").MongoClient;
 
 const url = "mongodb://marcus:123456a@ds161764.mlab.com:61764/hackatown2019";
 let db;
 const app = express();
+app.use(cors());
 
 MongoClient.connect(
   url,
